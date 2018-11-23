@@ -33,10 +33,8 @@ The `subscribe` argument is a function with the prototype `subscribe(query, vari
 When `subscribe` is called it returns a function that can be called to unsubscribe.
 The `callback` to the `subscribe` function has the prototype `callback(error, data)`. If
 both `error` and `data` are `null` then connection hs been closed normally.
-
- As the name suggests the `graphQLReconnectingSubscriber` will try to reconnect should
- the connection be dropped. The `delay` is specified in milliseconds. The `maxRetries`
- will limit the number of retries unless set to 0 which means unlimited.
+The `delay` is specified in milliseconds. The `maxRetries`
+will limit the number of retries unless set to 0 which means unlimited.
 
 The `graphQLRetryFetch` function is a simple `fetch` implementation for `query` and `mutation` operations.
 The `method` defaults to `'post'`, but `'get'` is also valid.
@@ -44,3 +42,7 @@ The `protocols` defaults to `"graphql-ws"`. The documentation suggests this can 
 The `delay` is specified in milliseconds. The `maxRetries`
  will limit the number of retries unless set to 0 which means unlimited.
  The `retryOn` argument is an array of status codes for which retry will be attempted.
+
+# Examples
+
+See the `graphQLSubscriber` from @jetblack/graphql-client for examples.

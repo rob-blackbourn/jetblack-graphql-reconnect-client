@@ -1,5 +1,4 @@
-import graphQLSubscriber from '@jetblack/graphql-client/Subscriber'
-import EventError from '@jetblack/graphql-client/EventError'
+import { graphQLSubscriber, EventError } from '@jetblack/graphql-client'
 
 class ReconnectingSubscriber {
   constructor (url, options, callback, delay = 1000, maxRetries = 0, protocols) {
