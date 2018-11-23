@@ -16,7 +16,7 @@
   "repository": "git@github.com:rob-blackbourn/jetblack-graphql-reconnect-client.git",
   "homepage": "https://github.com/rob-blackbourn/jetblack-graphql-reconnect-client",
   "author": "Rob Blackbourn <rob.blackbourn@gmail.com>",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "neutrino build",
     "lint": "neutrino lint"
@@ -27,6 +27,6 @@
     "neutrino": "^8.3.0"
   },
   "dependencies": {
-    "@jetblack/graphql-client": "^2.0.2"
+    "@jetblack/graphql-client": "^3.0.0"
   }
 }
