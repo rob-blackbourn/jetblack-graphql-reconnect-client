@@ -1,0 +1,32 @@
+{
+  "name": "@jetblack/graphql-reconnect-client",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Simple non-caching GraphQL client.",
+  "keywords": [
+    "graphql",
+    "client",
+    "subscribe",
+    "subscription",
+    "websocket",
+    "reconnect",
+    "retry"
+  ],
+  "main": "lib/index.js",
+  "repository": "git@github.com:rob-blackbourn/jetblack-graphql-reconnect-client.git",
+  "homepage": "https://github.com/rob-blackbourn/jetblack-graphql-reconnect-client",
+  "author": "Rob Blackbourn <rob.blackbourn@gmail.com>",
+  "license": "Apache 2.0",
+  "scripts": {
+    "build": "neutrino build",
+    "lint": "neutrino lint"
+  },
+  "devDependencies": {
+    "@neutrinojs/library": "^8.3.0",
+    "@neutrinojs/standardjs": "^8.3.0",
+    "neutrino": "^8.3.0"
+  },
+  "dependencies": {
+    "@jetblack/graphql-client": "^2.0.2"
+  }
+}
