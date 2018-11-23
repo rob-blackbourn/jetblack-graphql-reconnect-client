@@ -1,7 +1,7 @@
 {
   "name": "@jetblack/graphql-reconnect-client",
   "private": false,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simple non-caching GraphQL client.",
   "keywords": [
     "graphql",
@@ -27,6 +27,6 @@
     "neutrino": "^8.3.0"
   },
   "dependencies": {
-    "@jetblack/graphql-client": "^4.0.1"
+    "@jetblack/graphql-client": "^4.0.2"
   }
 }
