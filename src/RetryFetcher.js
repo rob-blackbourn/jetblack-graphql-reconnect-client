@@ -28,12 +28,16 @@ function retryFetch (url, options, delay = 1000, maxRetries = 0, retryOn = [503]
   })
 }
 
-export default function graphQLRetryFetch (url, query, variables = {}, operationName = null, headers = {}, method = 'post') {
+export const retryFetchOptions = {
+  method: 'post',
+  headers: { 'Content-Type': 'application/json' }
+}
+
+export default function graphQLRetryFetch (url, query, variables = {}, operationName = null, init = retryFetchOptions) {
   return retryFetch(
     url,
     {
-      method,
-      headers: { ...headers, 'Content-Type': 'application/json' },
+      ...init,
       body: JSON.stringify({
         query,
         variables,

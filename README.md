@@ -21,13 +21,15 @@ yarn add @jetblack/graphql-reconnect-client
 There are two functions:
 
  * `graphQLReconnectingSubscriber (url, options, callback, delay = 1000, maxRetries = 0, protocols = 'graphql-ws')`
- * `graphQLRetryFetch (url, query, variables = {}, operationName = null, headers = {}, method = 'post')`
+ * `graphQLRetryFetch (url, query, variables = {}, operationName = null, init = retryFetchOptions)`
 
 The `graphQLReconnectingSubscriber` implements the `WebSocket` protocol. The function takes the
 `url` for the `WebSocket`, an `options` object which is simply passed as JSON to the
 server, and a `callback` with the prototype `(error, subscribe)`. A function is returned
 which can be used to shutdown the subscriber.
 If both `error` and `subscribe` are `null` the connection has been closed normally.
+
+The `protocols` defaults to `"graphql-ws"`. The documentation suggests this can be an array or strings, but the first should be the default.
 
 The `subscribe` argument is a function with the prototype `subscribe(query, variables, operationName, callback)`.
 When `subscribe` is called it returns a function that can be called to unsubscribe.
@@ -37,11 +39,24 @@ The `delay` is specified in milliseconds. The `maxRetries`
 will limit the number of retries unless set to 0 which means unlimited.
 
 The `graphQLRetryFetch` function is a simple `fetch` implementation for `query` and `mutation` operations.
-The `method` defaults to `'post'`, but `'get'` is also valid.
-The `protocols` defaults to `"graphql-ws"`. The documentation suggests this can be an array or strings, but the first should be the default.
 The `delay` is specified in milliseconds. The `maxRetries`
  will limit the number of retries unless set to 0 which means unlimited.
  The `retryOn` argument is an array of status codes for which retry will be attempted.
+
+The `init` parameter is passed through to fetch. It has the default value `fetchOptions` which is defined as:
+
+```js
+const fetchOptions = {
+  method: 'post',
+  headers: { 'Content-Type': 'application/json' }
+}
+
+// The fetchOptions can be extended.
+const myFetchOptions = {
+    ...fetchOptions,
+    mode: 'cors'
+}
+```
 
 # Examples
 
