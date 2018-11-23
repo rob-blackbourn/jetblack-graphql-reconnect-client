@@ -27,6 +27,6 @@
     "neutrino": "^8.3.0"
   },
   "dependencies": {
-    "@jetblack/graphql-client": "^4.0.0"
+    "@jetblack/graphql-client": "^4.0.1"
   }
 }

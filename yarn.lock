@@ -87,10 +87,10 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@jetblack/graphql-client@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@jetblack/graphql-client/-/graphql-client-4.0.0.tgz#928315e4beea09689e4081bf3420d345962be53d"
-  integrity sha512-LIVg/A6gMVtta8uRUtWKf6wpPfUe/ry6b/l+lhk2X/o1exk9pNfhlqtCFJ1s7BLWKdeapqMJUJmWDPPF11jUPg==
+"@jetblack/graphql-client@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@jetblack/graphql-client/-/graphql-client-4.0.1.tgz#4577599e660cfcfb9c162757ad9ed7f562a281d8"
+  integrity sha512-xa7p7+DmC2RFMbytGoq3TNjqHK9QrNEntfgKbYGkNcofRiPe2re3wErQR5tJss1PBD2kvXBmgTJqSdEssXoRsw==
 
 "@neutrinojs/babel-minify-webpack-plugin@^0.2.0":
   version "0.2.0"
